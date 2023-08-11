@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navegacion from '../components/Navegacion.astro';
+---
+
+<Layout title="A Fuego Directo">
+	<main class="main main-home">
+		<div class="contenedor-fixed">
+			<div class="contenedor-centrado flex flex-col md:flex-row justify-between">
+				<div class="col_left flex flex-col justify-center items-center">
+					<div class="text-center block md:hidden" id="brand-mobile">
+						<a href="/">
+							<img src="fuego-directo-logo.png" alt="a fuego directo">
+						</a>
+					</div>
+					<div class="mt-6 md:mt-0" id="poster">
+						<img src="fuego-directo-poster-curso.jpg" alt="fuego directo poster curso">
+					</div>
+				</div>
+				<div class="col_righ flex flex-col justify-center items-center">
+					<div class="text-center hidden md:block" id="brand">
+						<a href="/">
+							<img src="fuego-directo-logo.png" alt="a fuego directo">
+						</a>
+					</div>
+					<nav class="flex flex-col bg-white rounded-3xl mt-7 nav" id="nav">
+						<a href="#">Inicio</a>
+						<a href="#">Quienes somos</a>
+						<a href="#" id="promociones">Promociones</a>
+						<a href="#" id="recetario">Recetario</a>
+					</nav>
+				</div>
+			</div>	
+		</div>
+	</main>
+</Layout>
+
+<style>
+	#bg_video {
+		position: fixed;
+		right: 0;
+		left: 0;
+		min-width: 100%;
+		min-height: 100%;
+	}
+
+	.mask {
+		content: '';
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(0,0,0,0.3);
+		z-index: 1;
+	}
+
+	.main {
+		position: fixed;
+		z-index: 2;
+	}
+
+	.contenedor-fixed {
+		padding: 2.5rem;
+		margin: auto;
+		width: 100vw;
+		height: 100vh;
+	}
+
+	.contenedor-centrado {
+		width: 80vw;
+		max-width: 1920px;
+		margin: auto;
+		padding: 2.4rem;
+	}
+
+	#brand-mobile img {
+		height: 18rem;
+		width: 18rem;
+	}
+
+	#brand img {
+		height: 18rem;
+		width: 18rem;
+	}
+
+	#poster {
+		width: 50vw;
+		max-width: 550px;
+	}
+
+	.nav {
+		height: 50vh;
+		max-height: 450px;
+		padding: 1.6rem;
+		width: 50vh;
+		max-width: 450px;
+		text-align: center;
+	}
+	/*  */
+
+	.nav a {
+		font-size: 2.5rem;
+		text-decoration: none;
+		border-bottom: solid 1px red;
+		display: inline-block;
+		padding: 1.5rem 0;
+	}
+</style>
+

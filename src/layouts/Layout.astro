@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description">
@@ -17,23 +17,123 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<!-- video de fondo -->
+		<video autoplay muted loop id="bg_video">
+			<source src="grill.mp4">
+		</video>
+		<div class="mask"></div>
 		<slot />
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
+	* {
+		margin: 0;
+		padding: 0;
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151A;
-		background-size: 224px;
+
+	html,
+	body {
+		background-color: #222;
+		height: 100%;
+		font-size: 62.5%;
 	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
+
+	/* Clases globales */
+	.hide {
+		display: none;
+	}
+
+	.show {
+		display: block;
+	}
+
+	#bg_video {
+		position: fixed;
+		right: 0;
+		left: 0;
+		min-width: 100%;
+		min-height: 100%;
+	}
+
+	.mask {
+		content: '';
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(0,0,0,0.3);
+		z-index: 1;
+	}
+
+	.main {
+		position: fixed;
+		z-index: 2;
+	}
+
+	.contenedor-fixed {
+		padding: 2.5rem;
+		margin: auto;
+		width: 100vw;
+		height: 100vh;
+	}
+
+	.contenedor-centrado {
+		width: 80vw;
+		max-width: 1920px;
+		margin: auto;
+		padding: 2.4rem;
+	}
+
+	#brand-mobile img {
+		height: 18rem;
+		width: 18rem;
+	}
+
+	#brand img {
+		height: 18rem;
+		width: 18rem;
+	}
+
+	#poster {
+		width: 50vw;
+		max-width: 550px;
+	}
+
+	.nav {
+		height: 50vh;
+		max-height: 450px;
+		padding: 1.6rem;
+		width: 50vh;
+		max-width: 450px;
+		text-align: center;
+	}
+	/*  */
+
+	.nav a {
+		font-size: 2.5rem;
+		text-decoration: none;
+		border-bottom: solid 1px red;
+		display: inline-block;
+		padding: 1.5rem 0;
 	}
 </style>
+
+
+<script>
+	// Variables 
+	const recetarioLink = document.getElementById('recetario'),
+		registroLink = document.getElementById('registro'),
+		url = window.location.pathname
+		
+		
+
+		if(url === '/') {
+			recetarioLink.style.display = 'none'
+		} else {
+			recetarioLink.style.display = 'block'
+		}
+
+		console.log(recetarioLink.nodeType)
+		console.log(registroLink)
+</script>
