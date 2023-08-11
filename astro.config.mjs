@@ -6,6 +6,6 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://afuegodirecto.github.io',
-  base: '/A-Fuego-Directo_Web',
+  base: '/a-fuego-directo',
 
 });
