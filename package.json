@@ -2,6 +2,7 @@
   "name": "a-fuego-directo",
   "type": "module",
   "version": "0.0.1",
+  "homepage": "https://fuegodirecto.github.io/site/",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
