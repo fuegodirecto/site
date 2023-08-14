@@ -5,7 +5,7 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://afuegodirecto.github.io',
-  base: '/a-fuego-directo-site',
+  site: 'https://fuegodirecto.github.io',
+  base: '/site',
 
 });
