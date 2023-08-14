@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navegacion from '../components/Navegacion.astro';
+import '../styles/app.css';
 ---
 
 <Layout title="A Fuego Directo">
@@ -63,7 +64,7 @@ import Navegacion from '../components/Navegacion.astro';
 		$buttonMailto.setAttribute('href', `mailto:entutarget+fuegodirecto@gmail.com?subject=${form.get('nombre')}${form.get('apellido')}&body=${form.get('email')}`)
 		$buttonMailto.click()
 		$submit.addEventListener('click', function () {
-			window.open('/a-fuego-directo-site/login')
+			window.open('/site/login')
 		})
 		
 		console.log('Hola mundo')
