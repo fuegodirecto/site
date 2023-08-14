@@ -1,0 +1,1 @@
+const e=document.getElementById("recetario"),o=document.getElementById("registro"),n=window.location.pathname;n==="/"?e.style.display="none":e.style.display="block";console.log(e.nodeType);console.log(o);
