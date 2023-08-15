@@ -19,10 +19,10 @@ import '../styles/app.css';
 	</head>
 	<body>
 		<!-- video de fondo -->
-		<video autoplay muted loop id="bg_video">
+		<video autoplay class="hidden sm:hidden xl:block" muted loop id="bg_video">
 			<source src="/site/grill.mp4">
 		</video>
-		<div class="mask"></div>
+		<div class="mask hidden sm:hidden md:block"></div>
 		<slot />
 	</body>
 </html>
