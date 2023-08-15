@@ -7,13 +7,13 @@
 		<link rel="icon" type="image/x-icon" href="/site/fuego-directo-icon.png">
 		<meta name="generator" content="Astro v2.10.5">
 		<title>A Fuego Directo</title>
-	<link rel="stylesheet" href="/site/_astro/index.849a8cb6.css" /><script type="module" src="/site/_astro/hoisted.6cdbeb2c.js"></script></head>
+	<link rel="stylesheet" href="/site/_astro/index.a1d8faf2.css" /><script type="module" src="/site/_astro/hoisted.6cdbeb2c.js"></script></head>
 	<body>
 		<!-- video de fondo -->
-		<video autoplay muted loop id="bg_video">
+		<video autoplay class="hidden sm:hidden xl:block" muted loop id="bg_video">
 			<source src="/site/grill.mp4">
 		</video>
-		<div class="mask"></div>
+		<div class="mask hidden sm:hidden md:block"></div>
 		
 	<main class="main main-home">
 		<div class="contenedor-fixed">
@@ -28,7 +28,7 @@
 						<img src="/site/fuego-directo-poster-curso.jpg" alt="fuego directo poster curso">
 					</div>
 				</div>
-				<div class="col_righ flex flex-col justify-center items-center">
+				<section class="col_righ flex flex-col justify-center items-center">
 					<div class="text-center hidden md:block" id="brand">
 						<a href="/site">
 							<img src="/site/fuego-directo-logo.png" alt="a fuego directo">
@@ -47,10 +47,17 @@
 							<label for="email">Correo electrónico</label>
 							<input class="formInput" type="text" placeholder="correo@mail.com" id="mail" required>
 						</div>
-						<input class="bg-red-600 w-48 p-4 text-white md:cursor-pointer md:hover:bg-red-700 text-lg uppercase font-bold" type="submit" value="Registrarme" id="submit">
+						<input class="bg-red-600 w-full md:w-48 p-4 text-white md:cursor-pointer md:hover:bg-red-700 text-lg uppercase font-bold" type="submit" value="Registrarme" id="submit">
 					</form>
 					<a href="mailto:entutarge+fuegodirecto@gmail.com" id="email">mail</a>
-				</div>
+					<footer class="foot bg-white rounded-3xl p-3 w-full">
+						<div class="socialMedia  flex flex-row items-center justify-center" id="socialMedia">
+							<p class="font-bold text-sm md:text-3xl">Síguenos en redes sociales: </p>
+							<a class="m-0 m-4" href="https://www.facebook.com/afuegodirecto" target="_blank"><img src="/site/facebook-icon.svg" alt="facebook icon"></a>
+							<a class="m-0 m-4" href="https://www.instagram.com/afuegodirecto/" target="_blank"><img src="/site/instagram-icon.svg" alt="instagram icon"></a>
+						</div>
+					</footer>
+				</section>
 			</div>	
 		</div>
 	</main>
