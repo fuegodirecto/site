@@ -5,6 +5,7 @@ interface Props {
 
 const { title } = Astro.props;
 import '../styles/app.css';
+import AudioWidget from '../components/AudioWidget.astro';
 ---
 
 <!DOCTYPE html>
@@ -18,6 +19,7 @@ import '../styles/app.css';
 		<title>{title}</title>
 	</head>
 	<body>
+		<AudioWidget/>
 		<!-- video de fondo -->
 		<video autoplay class="hidden sm:hidden xl:block" muted loop id="bg_video">
 			<source src="/site/grill.mp4">
