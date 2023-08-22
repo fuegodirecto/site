@@ -10,12 +10,11 @@
     </div>
 </div>
 <!-- Controls -->
-<!-- <audio id="audio"> 
+<audio id="audio"> 
     <source src="/site/country.ogg" type="audio/ogg">
     <source src="/site/country.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
-</audio> -->
-<!-- Audio -->
+</audio>
 
 
 <script>
@@ -28,19 +27,23 @@
     
 
    
-    song.play()
+    audio.setAttribute('autoplay', '')
+    audio.setAttribute('loop', '')
+
+
+    
 
     play.addEventListener('click', function() {
-        song.play()
+        audio.play()
     })
     
 
     pause.addEventListener('click', function (){
-        song.pause()
+        audio.pause()
     })
 
     mute.addEventListener('click', function (){
-        song.muted = true
+        audio.muted = true
     })
 
     
